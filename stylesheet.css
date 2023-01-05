@@ -37,6 +37,8 @@ body {
 
 #buttons {
 	-o-transform: scale(30%) translateX(175%) translateY(45%);
+	-moz-transform: scale(30%) translateX(175%) translateY(45%);
+	-ms-transform: scale(30%) translateX(175%) translateY(45%);
 	-webkit-transform: scale(30%) translateX(175%) translateY(45%);
 	transform: scale(30%) translateX(175%) translateY(45%);
 	transform-origin: top left;

@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <meta charset="utf-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
     </head>
     
         <body>
-        <header>
-            <h1>Ben's cool stuff</h1>
         
-        </header>
-        <p>Hey! Hi! Apparently I made this site like 7 years ago. Gonna use this for my portfolio yayyyyyyy check back soon</p>
+		<div id="loading">
+  		<div class="spinner"></div>
+  		</div>
+			
+        <div id="scene">
+            <div id="house">
+				<img src="assets/layer1.png" alt="Island">
+				<img src="assets/layer2.png" alt="Leaves Behind">
+				<img src="assets/layer3.png" alt="House">
+				<img src="assets/layer4.png" alt="Leave in Front" class="leaves">
+				<img src="assets/layer5.png" alt="POI">
+				<img src="assets/floating1.png" alt="Floating 1" id = "rocks1">
+				<img src="assets/floating2.png" alt="Floating 2" id = "rocks2">
+				<img src="assets/buttons.gif" alt="Buttons" id = "buttons" loop="false">
+			</div>
+		</div>
+			
     </body>
+	<script>
+		window.onload = function() {
+
+var loadingScreen = document.getElementById('loading');
+var animatedGif = document.getElementById('buttons');
+
+// Hide the loading screen
+loadingScreen.style.display = 'none';
+
+// Show the animated GIF
+animatedGif.style.display = 'block';
+
+// Start the animated GIF
+animatedGif.src = animatedGif.src;
+}
+  </script>
 </html>

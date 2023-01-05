@@ -36,7 +36,7 @@ body {
 
 
 #buttons {
-	transform: scale(0.3%) translateX(1.75) translateY(0.45);
+	transform: scale(30%) translate(175%, 45%);
 	transform-origin: top left;
 
 }

@@ -36,6 +36,8 @@ body {
 
 
 #buttons {
+	-o-transform: scale(30%) translateX(175%) translateY(45%);
+	-webkit-transform: scale(30%) translateX(175%) translateY(45%);
 	transform: scale(30%) translateX(175%) translateY(45%);
 	transform-origin: top left;
 
@@ -49,7 +51,6 @@ body {
 #rocks2 {
 	  animation: houseHover 4s ease-in-out infinite;
 
-	  animation-delay: 0.5s;
 }
 
 @keyframes houseHover {

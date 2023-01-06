@@ -19,28 +19,100 @@ body {
   max-width: 2000px;
   align-items: center;
   justify-content: center;
+
   overflow: auto;
   
 }
 
-#scene img {
-  position: absolute;
+#scene img{
+  	position: absolute;
 	width: 100%;
 	height: auto;
 	top: 0;
 	left: 0;
 	object-fit: cover;
 	margin-left: -2%;
+	pointer-events: none;
 
+}
+
+.video-wrapper{
+	position: relative;
+    overflow: visible;
+    width: 100%;
+    padding-top: 56.25%;
+    perspective: 100vw;
+    perspective-origin: 40% 190%;
+    scale: 25%;
+}
+
+.video {
+	position: absolute;
+    top: 70%;
+    left: 10%;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    transform: rotateX(360deg) rotateY(325deg);
+	mix-blend-mode: screen;
+	opacity: 0.8;
+	filter: blur(0.2vw);
+	animation-timing-function: steps(3, jump-both);
+	animation: flicker 2s infinite;
+  	
+
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.9;
+  }
+	20% {
+    opacity: 1;
+  }
+	30% {
+    opacity: 0.95;
+  }
+	40% {
+    opacity: 0.9;
+  }
+	50% {
+    opacity: 0.95;
+  }
+	60% {
+    opacity: 1;
+  }
+	70% {
+    opacity: 0.95;
+  }
+	80% {
+    opacity: 0.8;
+  }
+	90% {
+    opacity: 1;
+  }
+	100% {
+	opacity: 1;
+	}
 }
 
 
 #buttons {
-	transform: scale(0.3) translate(175%, 45%);
-	transform-origin: top left;
+	transform-origin: 10% 15%;
+	transform: scale(0.3) translate(155%, 13%);
+	
 
 }
 
+#wavy {
+		transform-origin: 10% 70%;
+		animation: leaves 12s ease-in-out infinite;
+
+}
 
 #rocks1 {
 	  animation: houseHover 3s ease-in-out infinite;
@@ -49,6 +121,41 @@ body {
 #rocks2 {
 	  animation: houseHover 4s ease-in-out infinite;
 
+}
+
+#leaves {
+    transform-origin: 10% 14%; 
+	animation: leaves 10s ease-in-out infinite;
+
+}
+#leaves1 {
+    transform-origin: 10% 14%; 
+	animation: leaves 12s ease-in-out infinite;
+
+}
+
+@keyframes leaves {
+	from{
+		transform: skewX(0);
+	}
+	20%{
+		transform: skewX(4deg);
+	}
+	50%{
+		transform: skewX(2deg);
+	}
+	60%{
+		transform: skewX(5deg);
+	}
+	70%{
+		transform: skewX(2deg);
+	}
+	80%{
+		transform: skewX(3deg);
+	}
+	to{
+		transform: skewX(0);
+	}
 }
 
 @keyframes houseHover {
@@ -61,15 +168,6 @@ body {
 	to{
 		transform: translate(0px, 20px);
 	}
-}
-#tubz{
-    
-	-webkit-transform: rotatex(50deg) rotateY(30deg) rotateZ(20deg);
-	transform: rotatex(50deg) rotateY(30deg) rotateZ(20deg);
-	
-	mix-blend-mode: screen;
-	opacity: 0.9;
-   
 }
 
 

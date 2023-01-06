@@ -60,6 +60,7 @@ body {
 	filter: blur(0.2vw);
 	animation-timing-function: steps(3, jump-both);
 	animation: flicker 2s infinite;
+	pointer-events: none;
   	
 
 }

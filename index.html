@@ -3,28 +3,39 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
+        <title>Ben's Internet Home</title>
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
     </head>
     
-        <body>
+        <body data-barba="wrapper">
         
 		<div id="loading">
   		<div class="spinner"></div>
   		</div>
-			
-        <div id="scene">
+		<main data-barba="container">
+		</main>
+		<div id="scene">
 			<img src="assets/layer1.png" alt="Island">
 			<img src="assets/layer2.png" alt="Leaves Behind" id = "leaves1">
+			<img src="assets/window.png" alt="Window">
+
+			<img src="assets/Screen.png" alt="screen">
 			<div class="video-wrapper">
-   				 <iframe class="video" src="https://player.vimeo.com/video/787035801?controls=1&autoplay=1&loop=1&muted=1"
+				<iframe class="video" src="https://player.vimeo.com/video/787035801?controls=1&autoplay=1&loop=1&muted=1"
 				width="640" height="360" frameborder="0" allow="autoplay; fullscreen"
 				allowfullscreen></iframe>
-  			</div>
+			</div>
+
+
 			<img src="assets/layer3.png" alt="House">
 			<div id="buttonDiv">
+				
+				
 			</div>
+			<a href="films.html"><div id="films"></div></a>
+			
 			<img src="assets/abuttons.png" alt="Buttons" id = "buttons">
+			
 	
 			<img src="assets/layer4.png" alt="Leave in Front" id ="leaves">
 			<img src="assets/layer5.png" alt="POI">
@@ -32,10 +43,35 @@
 			<img src="assets/floating2.png" alt="Floating 2" id = "rocks2">
 
 			<img src="assets/wavy1.png" alt="Wavy" id = "wavy">
+			<div id="lighting"></div>
+			<img src="assets/ben.png" alt="Ben" id = "ben">
+			<img src="assets/Darking.png" alt="Dark" id = "dark">
+			<img src="assets/Lighting.png" alt="Light" id = "light">
+			
+			
+			<!-- Links -->
+			
+			
+			
+			
 		</div>
+
+		<!-- unpkg -->
+		<script src="https://unpkg.com/@barba/core"></script>
+		<script src="https://unpkg.com/@barba/css"></script>
 			
     </body>
 	<script>
+//barba
+
+barba.use(barbaCss);
+barba.init();
+
+
+
+
+//loading
+
 		window.onload = function() {
 
 var loadingScreen = document.getElementById('loading');

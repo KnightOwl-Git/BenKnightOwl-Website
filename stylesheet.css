@@ -1,46 +1,35 @@
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    vertical-align: baseline;
-    background: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  vertical-align: baseline;
+  background: transparent;
 }
 
 body {
-        background-color: #ffcf79;
+  background-color: #ffcf79;
+  overflow-x: hidden;
 }
 
-h1{
+h1 {
   color: white;
   text-align: center;
   top: 50%;
   left: 50%;
   font-size: 90px;
-
 }
 
-p{
+p {
   color: white;
   font-size: 50px;
-  
-
 }
-a{
-  color:#89efff;
+a {
+  color: #89efff;
 }
-
-#ben{
-  position:absolute;
-  
-  mix-blend-mode: screen;
-  animation: flicker 4s infinite;
-  animation: houseHover 5s infinite;
-
-}
-
 
 #scene {
   position: absolute;
@@ -48,53 +37,71 @@ a{
   height: 100%;
   /*max-width: 2000px; */
   align-items: center;
-  justify-content: center; 
-  clip-path: inset(0,0,0,0);
-  
-  
-  
+  justify-content: center;
+  clip-path: inset(0, 0, 0, 0);
 }
 
-#scene img{
+@media all and (max-width: 600px) {
+  #scene {
+    width: 400%;
+    align-items: center;
+    justify-content: center;
+
+    left: -222%;
+    margin-top: -50%;
+  }
+
+  .video {
+    display: none;
+  }
+  #ben {
+  }
+}
+
+#ben {
   position: absolute;
-	width: 105%;
-	height: auto;
-	top: 0;
-	left: 0;
-	object-fit: cover;
-	margin-left: -5%;
+
+  mix-blend-mode: screen;
+  animation: flicker 4s infinite;
+  animation: houseHover 5s infinite;
+}
+
+#scene img {
+  position: absolute;
+  width: 105%;
+  height: auto;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  margin-left: -5%;
   pointer-events: none;
   overflow-x: hidden;
-
 }
 
-.video-wrapper{
-	position: relative;
-    overflow: visible;
-    width: 100%;
-    padding-top: 56.25%;
-    perspective: 100vw;
-    perspective-origin: 40% 190%;
-    scale: 27%;
+.video-wrapper {
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  padding-top: 56.25%;
+  perspective: 100vw;
+  perspective-origin: 40% 190%;
+  scale: 27%;
 }
 
 .video {
-	position: absolute;
-    top: 76%;
-    left: 14.5%;
-    bottom: 0;
-    right: 0;
-    width: 50%;
-    height: 50%;
-    transform: rotateX(360deg) rotateY(332deg);
-	mix-blend-mode: screen;
-	opacity: 0.6;
-	filter: blur(0.2vw);
-	animation-timing-function: steps(3, jump-both);
-	animation: flicker 2s infinite;
-
-  	
-
+  position: absolute;
+  top: 76%;
+  left: 14.5%;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform: rotateX(360deg) rotateY(332deg);
+  mix-blend-mode: screen;
+  opacity: 0.6;
+  filter: blur(0.2vw);
+  animation-timing-function: steps(3, jump-both);
+  animation: flicker 2s infinite;
 }
 
 @keyframes flicker {
@@ -104,139 +111,119 @@ a{
   10% {
     opacity: 0.9;
   }
-	20% {
+  20% {
     opacity: 1;
   }
-	30% {
+  30% {
     opacity: 0.95;
   }
-	40% {
+  40% {
     opacity: 0.9;
   }
-	50% {
+  50% {
     opacity: 0.95;
   }
-	60% {
+  60% {
     opacity: 1;
   }
-	70% {
+  70% {
     opacity: 0.95;
   }
-	80% {
+  80% {
     opacity: 0.8;
   }
-	90% {
+  90% {
     opacity: 1;
   }
-	100% {
-	opacity: 1;
-	}
+  100% {
+    opacity: 1;
+  }
 }
 
 #films {
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-	height: 100%;
+  height: 100%;
   border-width: 1px;
   pointer-events: all;
-  
-
 }
 
-
 #buttons {
-	transform-origin: 10% 15%;
-	transform: scale(0.3) translate(155%, 13%);
-
-	
-
+  transform-origin: 10% 15%;
+  transform: scale(0.3) translate(155%, 13%);
 }
 
 #wavy {
-		transform-origin: 10% 70%;
-		animation: leaves 12s ease-in-out infinite;
-
+  transform-origin: 10% 70%;
+  animation: leaves 12s ease-in-out infinite;
 }
 
 #rocks1 {
-	  animation: houseHover 3s ease-in-out infinite;
-
+  animation: houseHover 3s ease-in-out infinite;
 }
 #rocks2 {
-	  animation: houseHover 4s ease-in-out infinite;
-
+  animation: houseHover 4s ease-in-out infinite;
 }
 
 #leaves {
-
-  transform-origin: 10% 14%; 
-	animation: leaves 10s ease-in-out infinite;
-	overflow-x: hidden;
-  
-
+  transform-origin: 10% 14%;
+  animation: leaves 10s ease-in-out infinite;
+  overflow-x: hidden;
 }
 #leaves1 {
-
-  transform-origin: 10% 14%; 
-	animation: leaves 12s ease-in-out infinite;
-	overflow-x: hidden;
-  
-
+  transform-origin: 10% 14%;
+  animation: leaves 12s ease-in-out infinite;
+  overflow-x: hidden;
 }
 
 @keyframes leaves {
-	from{
-		transform: skewX(0);
-	}
-	20%{
-		transform: skewX(4deg);
-	}
-	50%{
-		transform: skewX(2deg);
-	}
-	60%{
-		transform: skewX(5deg);
-	}
-	70%{
-		transform: skewX(2deg);
-	}
-	80%{
-		transform: skewX(3deg);
-	}
-	to{
-		transform: skewX(0);
-	}
+  from {
+    transform: skewX(0);
+  }
+  20% {
+    transform: skewX(4deg);
+  }
+  50% {
+    transform: skewX(2deg);
+  }
+  60% {
+    transform: skewX(5deg);
+  }
+  70% {
+    transform: skewX(2deg);
+  }
+  80% {
+    transform: skewX(3deg);
+  }
+  to {
+    transform: skewX(0);
+  }
 }
 
 @keyframes houseHover {
-	from{
-		transform: translate(0px, 20px);
-	}
-	50%{
-		transform: translate(0px, 30px);
-	}
-	to{
-		transform: translate(0px, 20px);
-	}
+  from {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0px, 1%);
+  }
+  to {
+    transform: translate(0px, 0);
+  }
 }
 
-
-
-
 #dark {
-mix-blend-mode: hard-light;
-z-index: 40;
-	
+  mix-blend-mode: hard-light;
+  z-index: 40;
 }
 
 #light {
-mix-blend-mode: hard-light;
+  mix-blend-mode: hard-light;
 
-z-index: 40;
+  z-index: 40;
 }
-
 
 #loading {
   position: fixed;
@@ -260,22 +247,19 @@ z-index: 40;
   animation: spin 1s linear infinite;
 }
 
-#dimmer
-{
-    position:fixed;
-    padding:0;
-    margin:0;
-    z-index: 0;
+#dimmer {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  z-index: 0;
 
+  top: 0;
+  left: 0;
 
-    top:0;
-    left:0;
-
-    width: 200%;
-    height: 200%;
-    background:rgba(7, 43, 135, 0.603);
-    overflow-y: visible;
-
+  width: 200%;
+  height: 200%;
+  background: rgba(7, 43, 135, 0.603);
+  overflow-y: visible;
 }
 
 .subpage {

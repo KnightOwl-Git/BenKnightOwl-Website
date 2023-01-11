@@ -13,6 +13,7 @@
     </div>
     <main data-barba="container"></main>
     <div id="scene">
+      <a href="films.html"><div id="films"></div></a>
       <img src="assets/layer1.png" alt="Island" />
       <img src="assets/layer2.png" alt="Leaves Behind" id="leaves1" />
       <img src="assets/window.png" alt="Window" />
@@ -32,7 +33,6 @@
 
       <img src="assets/layer3.png" alt="House" />
       <div id="buttonDiv"></div>
-      <a href="films.html"><div id="films"></div></a>
 
       <img src="assets/abuttons.png" alt="Buttons" id="buttons" />
 
@@ -58,7 +58,15 @@
     //barba
 
     barba.use(barbaCss);
-    barba.init();
+    barba.init({
+      sync: true,
+      leave() {
+        // transition that will play concurrently to `enter`
+      },
+      enter() {
+        // transition that will play concurrently to `leave`
+      }
+    });
 
     //loading
 

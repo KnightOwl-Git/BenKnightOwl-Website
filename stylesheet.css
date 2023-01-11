@@ -10,7 +10,8 @@
   background: transparent;
 }
 
-body {
+body,
+html {
   background-color: #ffcf79;
   overflow-x: hidden;
 }

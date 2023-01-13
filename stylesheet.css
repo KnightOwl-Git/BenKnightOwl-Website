@@ -13,7 +13,7 @@
 body,
 html {
   background-color: #ffcf79;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 #scene {
@@ -29,8 +29,6 @@ html {
 @media all and (max-width: 600px) {
   #scene {
     width: 400%;
-    align-items: center;
-    justify-content: center;
 
     left: -222%;
     margin-top: -50%;
@@ -129,14 +127,22 @@ html {
   }
 }
 
-#films {
+#button-link {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+width: 20%;
+
+
+left: 58%;
+
+aspect-ratio: 1/0.2;
+  
+  color: black;
+  border-style: solid;
   border-width: 1px;
   pointer-events: all;
+
+  
+  
 }
 
 #buttons {
@@ -285,31 +291,85 @@ html {
 
 /*subpages*/
 
+#back {
+  position: sticky;
+  color: white;
+}
+
 .subpage {
   position: relative;
-  display: inline;
-  margin-top: 25vh;
+  margin-top: 10vh;
+  align-items: center;
+}
+
+.title {
   text-align: center;
+}
+
+.subpage {
+  padding: 5%;
+}
+
+.film-entry {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin: 1em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #384052;
+  border-radius: 1rem;
+  z-index: 9999;
+
+  border-width: 1px;
+  z-index: 200;
+  perspective: 100vw;
+}
+.film-entry iframe {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  z-index: 9999;
+}
+.film-details {
+  width: 100%;
+  height: 100%;
+}
+.film-description {
+  padding-top: 0.6rem;
+  text-align: left;
+}
+
+.film-entry > * {
+  padding: 1em;
+
+  border-width: 2px;
+}
+
+.lil-films {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+#subtitle {
+font-size: 1rem;
 }
 
 h1 {
-  position: sticky;
   color: white;
-  text-align: center;
-  margin-top: 20%;
-  left: 50%;
-  font-size: max(20vw);
+
+  font-size: 3rem;
 }
 
-h2{
-position: sticky;
-top:0;
-left:0;
+h2 {
+  color: white;
+  font-size: 2rem;
 }
 
 p {
   color: white;
-  font-size: 10vw;
+  font-size: 1rem;
 }
 a {
   color: #89efff;

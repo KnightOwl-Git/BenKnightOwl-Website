@@ -13,7 +13,8 @@
 body,
 html {
   background-color: #ffcf79;
-  /* overflow-x: hidden; */
+  overflow-x: hidden; !important;
+  width: 100vw;
 }
 
 #scene {
@@ -62,6 +63,7 @@ html {
   object-fit: cover;
   margin-left: -5%;
   pointer-events: none;
+
   overflow-x: hidden;
 }
 
@@ -128,22 +130,21 @@ html {
 }
 
 #button-link {
-  position: absolute;
-  width: 20%;
+  pointer-events: all;
+}
 
-  left: 58%;
-
-  aspect-ratio: 1/0.2;
-
-  color: black;
-  border-style: solid;
-  border-width: 1px;
+#scene img[src="assets/button-svg/Films.svg"] {
   pointer-events: all;
 }
 
 #buttons {
   transform-origin: 10% 15%;
   transform: scale(0.3) translate(155%, 13%);
+}
+
+#buttonsClick {
+  position: absolute;
+  transform: translate(-1%, 2%);
 }
 
 #wavy {

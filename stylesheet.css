@@ -40,8 +40,6 @@ html {
   /*max-width: 2000px; */
   align-items: center;
   justify-content: center;
-  max-width: 100% !important;
-  overflow-x: hidden !important;
 }
 
 #ben {
@@ -131,6 +129,20 @@ html {
   pointer-events: all;
 }
 
+.cls-1:hover .filmbulb {
+  opacity: 1;
+}
+
+.cls-2:hover .animbulb {
+  opacity: 1;
+}
+.cls-3:hover .storybulb {
+  opacity: 1;
+}
+.cls-4:hover .gallerybulb {
+  opacity: 1;
+}
+
 #scene img[src="assets/button-svg/Films.svg"] {
   pointer-events: all;
 }
@@ -138,6 +150,12 @@ html {
 #buttons {
   transform-origin: 10% 15%;
   transform: scale(0.3) translate(155%, 13%);
+}
+
+.bulbs {
+  mix-blend-mode: overlay;
+  filter: blur(1vw);
+  opacity: 0;
 }
 
 #buttonsClick {

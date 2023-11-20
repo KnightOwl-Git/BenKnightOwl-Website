@@ -1,0 +1,19 @@
+.ben-border {
+    -webkit-mask-box-image-source: url(/Border.png);
+    -webkit-mask-box-image-slice: 142 fill;
+    -webkit-mask-box-image-width: 20px;
+    -webkit-mask-box-image-outset: 0.9em;
+    -webkit-mask-box-image-repeat: repeat;
+  }
+
+  .ben-flex {
+	gap:15px;
+	display:flex;
+	align-content:stretch;
+	flex-direction:row;
+	justify-content:center;
+	align-self:auto;
+	align-items:stretch;
+	flex:0 1 auto;
+	flex-wrap:wrap;
+}

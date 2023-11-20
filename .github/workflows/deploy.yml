@@ -34,6 +34,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: PUT THE SITE ON THE INTERNET!
         id: deployment
         uses: actions/deploy-pages@v1

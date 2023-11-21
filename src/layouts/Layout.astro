@@ -31,7 +31,7 @@ const { title } = Astro.props;
 			<div id="site-wrapper">
 				<Header />
 				<div id="spacer"></div>
-				<slot />
+				<slot transition:animate="slide"/>
 				<div id="spacer"></div>
 				<Footer />
 			</div>

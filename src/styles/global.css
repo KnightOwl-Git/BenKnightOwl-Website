@@ -1,5 +1,5 @@
 .ben-border {
-    -webkit-mask-box-image-source: url(/Border.png);
+    -webkit-mask-box-image-source: url(/Border.webp);
     -webkit-mask-box-image-slice: 142 fill;
     -webkit-mask-box-image-width: 20px;
     -webkit-mask-box-image-outset: 0.9em;

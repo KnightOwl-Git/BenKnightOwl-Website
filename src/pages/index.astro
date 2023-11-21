@@ -6,19 +6,19 @@ import Card from "../components/Card.astro";
 <Layout title="Ben's Internet Home!">
   <main class="ben-flex">
     <div class="ben-grid">
-      <li id="anim" class="ben-border">Animation Portfolio</li>
+      <li id="anim" class="ben-border"><a href="./anim">2D Animation Portfolio</a></li>
 
-      <li id="cg" class="ben-border">CG Stuff</li>
+      <li id="cg" class="ben-border"><a href="./cg">CG Stuff</a></li>
 
-      <li id="illus" class="ben-border">Illustrations</li>
+      <li id="illus" class="ben-border"><a href="./illustrations">Illustrations</a></li>
 
-      <li id="lifed" class="ben-border">Life drawings</li>
+      <li id="lifed" class="ben-border"><a href="./life-drawings">Life Drawings</a></li>
 
-      <li id="ytvids" class="ben-border">Youtube Videos</li>
+      <li id="ytvids" class="ben-border"><a href="./videos">Youtube Videos</a></li>
 
-      <li id="music" class="ben-border">Music</li>
+      <li id="music" class="ben-border"><a href="./music">Music</a></li>
 
-      <li id="films" class="ben-border">Films</li>
+      <li id="films" class="ben-border"><a href="./films">Films</a></li>
     </div>
     <aside class="ben-border">Recent Projects</aside>
   </main>
@@ -28,6 +28,13 @@ import Card from "../components/Card.astro";
   li {
     background-color: #ffcd7b;
     display: flex;
+  }
+
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+
   }
 
   aside {

@@ -1,10 +1,7 @@
-import { defineConfig, squooshImageService } from 'astro/config';
+import { defineConfig } from 'astro/config';
 
 
 export default defineConfig({
   site: 'https://benknightowl.com',
-  image: {
-    service: squooshImageService(),
-  },
 })
 

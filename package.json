@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",
+    "@astrojs/prefetch": "latest",
     "astro": "^3.5.5",
-    "sharp": "^0.32.6",
+    "sharp": "latest",
     "typescript": "^5.2.2"
   }
 }
+

@@ -17,3 +17,15 @@
 	flex:0 1 auto;
 	flex-wrap:wrap;
 }
+
+
+:root {
+	--animColor: #ffcd7b;
+	--cgColor: #d7fc9a;
+	--filmColor: #00fcdb;
+	--ldColor: #00fc8b;
+	--illusColor: #b1fc4f;
+	--musicColor: rgba(169, 137, 255, 1);
+	--vidColor: rgba(154, 236, 255, 1);
+
+}

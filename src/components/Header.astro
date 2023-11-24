@@ -5,7 +5,7 @@ import HeaderBG from "../images/TestBG.webp"
 
 ---
 
-<div id="h-wrapper" class="header ben-flex" transition:persist>
+<div class="header ben-flex" transition:persist>
   <div id="logo" class="ben-border">
     
     
@@ -14,52 +14,31 @@ import HeaderBG from "../images/TestBG.webp"
         Home
     </a>
 
-    
-    
   </div>
-  <div id="nav-wrapper" class="ben-border">
-    <div id="nav">
-      <a id="benButt" href="/work">Work</a>
-      <a id="benButt" href="/about">about</a>
-      <a id="benButt" href="/contact">Contact</a>
-    </div>
+    <div id="nav" class="ben-border">
+      <a class="benButt ben-border" href="/work">Work</a>
+      <a class="benButt ben-border" href="/about">about</a>
+      <a class="benButt ben-border" href="/contact">Contact</a>
   </div>
 </div>
 
 <style>
-  #benButt {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-basis: 1auto;
-    text-align: center;
-    text-transform: none;
-    font-size: 29px;
-    padding-top: 11%;
-    height: 67%;
+  .benButt {
+    
+    background-color: rgb(155, 196, 108);
+    font-size: 2rem;
+    padding: 1rem;
+    flex: 1 1 100%;
+
   }
 
-  a.fillDiv {
-    display: block;
-    height: 100%;
-    width: 100%;
-  }
-
-  #h-wrapper {
-    align-content: stretch;
-  }
-  #nav-wrapper {
-    flex: 1 1 26%;
-    max-width: 177%;
-  }
   #nav {
+    display: flex;
     flex-direction: column;
+    flex: 1 1 26%;
+    width: 100%;
     background-color: #00fca5;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    flex: 1 1 0%;
+    gap: 1rem;
   }
   #logo {
     flex: 18 0 1%;
@@ -69,14 +48,8 @@ import HeaderBG from "../images/TestBG.webp"
       rgb(61, 255, 210) 10%,
       rgb(122, 251, 255) 90%
     );
-    background-position: 0px 0px;
-    background-size: 100% 100%;
-    background-repeat: repeat;
-    background-attachment: scroll;
-    background-origin: padding-box;
     min-width: 228px;
     min-height: 145px;
-    display: flex;
   }
 
   #headerBG {

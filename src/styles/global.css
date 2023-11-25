@@ -1,3 +1,5 @@
+
+
 .ben-border {
     -webkit-mask-box-image-source: url(/Border.webp);
     -webkit-mask-box-image-slice: 142 fill;
@@ -28,6 +30,8 @@
 	--musicColor: rgba(169, 137, 255, 1);
 	--vidColor: rgba(154, 236, 255, 1);
 
+  --gap:1em;
+
 }
 
 
@@ -35,7 +39,7 @@
 /* Handle aspect ratio changes */
 
 
-::view-transition-group(ARChange) {
+::view-transition-group(active-card) {
   z-index: 50;
 
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -49,8 +53,13 @@
     -webkit-mask-box-image-repeat: repeat;
 }
 
-::view-transition-old(ARChange),
-::view-transition-new(ARChange) {
+
+
+
+
+
+::view-transition-old(active-card),
+::view-transition-new(active-card) {
   /* Prevent the default animation,
   so both views remain opacity:1 throughout the transition */
 
@@ -67,21 +76,17 @@
   /* Clip any overflow of the view */
   overflow: clip;
   
-
-  
-
-
 }
 
 /* The old view is the thumbnail */
-::view-transition-old(ARChange) {
+::view-transition-old(active-card) {
   /* Maintain the aspect ratio of the view,
   by shrinking it to fit within the bounds of the element */
   object-fit: contain;
 }
 
 /* The new view is the full image */
-::view-transition-new(ARChange) {
+::view-transition-new(active-card) {
   /* Maintain the aspect ratio of the view,
   by growing it to cover the bounds of the element */
   object-fit: cover;

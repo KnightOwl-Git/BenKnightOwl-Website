@@ -1,12 +1,27 @@
+---
+import type Anim from "../pages/anim.astro";
+import Card from "./Card.astro";
+
+const animColor="blue";
+
+---
 
 
 
-<div class="ben-grid" transition:animate="slide">
-  <li id="anim" class="ben-border"  transition:name="ARChange">
-    <a href="/anim">2D Animation Portfolio</a>
-  </li>
 
-  <li id="cg" class="ben-border"  transition:name="cg"><a href="/cg">CG Stuff</a></li>
+<div class="ben-grid">
+
+    <Card 
+    title="anim"; href="/anim"; color= "var(--animColor)";
+    gridArea="1 / 1 / 3 / 2";
+  />
+  
+
+  <Card 
+    title="cg-stuff"; href="/cg"; color= "var(--cgColor)";
+    gridArea= "1 / 2 / 2 / 3";
+    gridAreaM= "1 / 2 / 2 / 3";
+  />
 
   <li id="illus" class="ben-border"  transition:name="illus">
     <a href="/illustrations">Illustrations</a>
@@ -55,10 +70,7 @@
     background-color: var(--animColor);
     grid-area: 1 / 1 / 3 / 2;
   }
-  #cg {
-    background-color: var(--cgColor);
-    grid-area: 1 / 2 / 2 / 3;
-  }
+
   #films {
     background-color: var(--filmColor);
     grid-area: 1 / 3 / 2 / 4;
@@ -117,3 +129,4 @@
     }
   }
 </style>
+

@@ -45,7 +45,6 @@
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   animation-duration: 0.3s;
 
-  background-color: var(--animColor);
   -webkit-mask-box-image-source: url(/Border.webp);
     -webkit-mask-box-image-slice: 142 fill;
     -webkit-mask-box-image-width: 1.4rem;

@@ -2,23 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Music">
-    Music!
-
-    <a href="/music">music</a>
-    <div class="testpage2" transition:name="testgrid" >
-    </div>
-
-    
+<Layout title="Illustrations">
+    <header id="illustrations" class="ben-border transHeader" transition:name="active-card">
+        hello
+    </header>
+    Films!
 </Layout>
-
 <style>
-    
-    .testpage2 {
-
-        width: 300px;
-        height: 900px;
-        background-color: green;
+    header {
+        background-color: var(--illusColor);
+        height: 1000px;
+        
     }
-    
 </style>

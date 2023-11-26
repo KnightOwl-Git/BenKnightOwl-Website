@@ -23,12 +23,15 @@ function transition() {
 
       if (card.classList.contains("cat")) {
         card.style.viewTransitionName = "active-card";
+        
+
       }
     });
   });
   card = document.getElementById(transID);
   if (card != null) {
     card.style.viewTransitionName = "active-card";
+    
   }
 }
 

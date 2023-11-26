@@ -1,31 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import Categrid from '../components/Categrid.astro';
+import Categrid from "../components/Categrid.astro";
 ---
 
 <Layout title="Ben's Internet Home!">
   <main class="ben-flex">
-    <Categrid/>
-    
+    <Categrid />
+
     <aside class="ben-border">Recent Projects</aside>
   </main>
-  <div class="test1" transition:name="testgrid"></div>
 </Layout>
 
 <script>
-
-    console.log("shmelp");
-
+  console.log("shmelp");
 </script>
 
 <style>
-
-.test1 {
-        width:300px;
-        height:100px;
-        background-color:blue;
-    }
   li {
     background-color: #ffcd7b;
     display: flex;
@@ -35,7 +26,6 @@ import Categrid from '../components/Categrid.astro';
     display: block;
     height: 100%;
     width: 100%;
-
   }
 
   aside {
@@ -59,8 +49,6 @@ import Categrid from '../components/Categrid.astro';
     align-items: stretch;
   }
 
-  
-
   .main {
     display: flex;
     justify-content: flex-start;
@@ -70,8 +58,4 @@ import Categrid from '../components/Categrid.astro';
     padding: 10px 0;
     flex-wrap: wrap;
   }
-
-  
-
 </style>
-

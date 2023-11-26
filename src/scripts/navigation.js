@@ -6,6 +6,7 @@ let transID = "oh no";
 function transition() {
   document.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", (e) => {
+      deactivate();
       const el = e.currentTarget;
 
       //note: not useful when going back home

@@ -2,11 +2,7 @@
 import type Anim from "../pages/anim.astro";
 import Card from "./Card.astro";
 
-const animColor="blue";
-
 ---
-
-
 
 
 <div class="ben-grid">
@@ -14,6 +10,8 @@ const animColor="blue";
     <Card 
     title="anim"; href="/anim"; color= "var(--animColor)";
     gridArea="1 / 1 / 3 / 2";
+    gridAreaM="1 / 1 / 3 / 2";
+    
   />
   
 
@@ -23,110 +21,66 @@ const animColor="blue";
     gridAreaM= "1 / 2 / 2 / 3";
   />
 
-  <li id="illus" class="ben-border"  transition:name="illus">
-    <a href="/illustrations">Illustrations</a>
-  </li>
+  <Card
 
-  <li id="lifed" class="ben-border"  transition:name="lifed">
-    <a href="/life-drawings">Life Drawings</a>
-  </li>
+    title="films"; href="/films"; color= "var(--filmColor)";
+    gridArea= "1 / 3 / 2 / 4";
+    gridAreaM= "2 / 2 / 3 / 3";
 
-  <li id="ytvids" class="ben-border" transition:name="ytvids"><a href="./videos">Youtube Videos</a></li>
+  />
+  <Card
 
-  <li id="music" class="ben-border" transition:name="music"><a href="./music">Music</a></li>
+    title="illustrations"; href="/illustrations"; color= "var(--illusColor)";
+    gridArea= "2 / 2 / 4 / 3";
+    gridAreaM= "3 / 2 / 5 / 3";
 
-  <li id="films" class="ben-border" transition:name="films"><a href="./films">Films</a></li>
+  />
+
+  <Card
+
+    title="life-drawing"; href="/life-drawings"; color= "var(--ldColor)";
+    gridArea= "2 / 3 / 3 / 4";
+    gridAreaM= "3 / 1 / 4 / 2";
+
+  />
+
+  <Card
+
+    title="videos"; href="/videos"; color= "var(--vidColor)";
+    gridArea= "3 / 1 / 4 / 2";
+    gridAreaM= "5 / 2 / 6 / 3";
+
+  />
+
+  <Card
+
+    title="music"; href="/music"; color= "var(--musicColor)";
+    gridArea= "3 / 3 / 4 / 4";
+    gridAreaM= "4 / 1 / 5 / 2";
+
+  />
 </div>
 
 <style>
-  li {
-    background-color: #ffcd7b;
-    display: flex;
-  }
+
 
   .ben-grid {
     flex: 1 1 62%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    grid-gap: 1rem;
+    gap: 1.2%;
     align-self: flex-start;
     display: grid;
   }
 
-  a {
-    display: block;
-    height: 100%;
-    width: 100%;
-  }
-
-  li:before {
-    content: "";
-    display: block;
-    
-    padding-bottom: 100%;
-  }
-
-  #anim {
-    background-color: var(--animColor);
-    grid-area: 1 / 1 / 3 / 2;
-  }
-
-  #films {
-    background-color: var(--filmColor);
-    grid-area: 1 / 3 / 2 / 4;
-  }
-
-  #illus {
-    background-color: var(--illusColor);
-    grid-area: 2 / 2 / 4 / 3;
-  }
-  #lifed {
-    background-color: var(--ldColor);
-    grid-area: 2 / 3 / 3 / 4;
-  }
-
-  #ytvids {
-    background-color: var(--vidColor);
-    grid-area: 3 / 1 / 4 / 2;
-  }
-
-  #music {
-    background-color: var(--musicColor);
-    grid-area: 3 / 3 / 4 / 4;
-  }
-
   @media (max-width: 992px) {
-    li {
-      background-color: aliceblue;
-    }
+  
     .ben-grid {
       grid-template-columns: repeat(2, 1fr);
-    }
+      gap: 1%;
 
-    #anim {
-      grid-area: 1 / 1 / 3 / 2;
     }
-    #cg {
-      grid-area: 1 / 2 / 2 / 3;
-    }
-    #films {
-      grid-area: 2 / 2 / 3 / 3;
-    }
-
-    #illus {
-      grid-area: 3 / 2 / 5 / 3;
-    }
-    #lifed {
-      grid-area: 3 / 1 / 4 / 2;
-    }
-
-    #ytvids {
-      grid-area: 5 / 2 / 6 / 3;
-    }
-
-    #music {
-      grid-area: 4 / 1 / 5 / 2;
-    }
+    
   }
 </style>
 

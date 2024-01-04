@@ -10,9 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.1",
+    "@astrojs/check": "^0.3.2",
     "@astrojs/prefetch": "latest",
-    "astro": "^3.5.5",
+    "astro": "^4.0.4",
     "sharp": "^0.33.0-alpha.11",
     "squoosh": "^0.0.0",
     "typescript": "^5.2.2"

@@ -1,20 +1,129 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Animation">
+  <header
+    id="anim"
+    class="ben-border bg transHeader"
+    transition:name="active-card"
+  >
+    <h1>Ben's Animation Portfolio</h1>
+  </header>
 
-    <header id="anim" class="ben-border transHeader" transition:name="active-card">
-        hello
-    </header>
-    Animation!
+  <section>
+    <iframe
+      id="reel"
+      class="ben-border"
+      src="https://www.youtube.com/embed/bHpwbX5BLI4?si=aMrubz5ftCasX4dA"
+    ></iframe>
+    <h2 class="ben-border">Reel</h2>
+  </section>
+  <br/>
+  <section>
+    <h2 class="beeg">NO DIALOGUE.</h2>
+    <div class="flex-gallery">
+        <div class="animage"><h1>example</h1></div>
+        <div class="animage"><h1>example</h1></div>
+        <div class="animage"><h1>example</h1></div>
+        <div class="animage"><h1>example</h1></div>
+    </div>
+    
+  </section>
+  <section>
+    <h2 class="beeg">Gary the Duck</h2>
+    <div class="flex-gallery">
+        <div class="animage"><h1>example</h1></div>
+        <div class="animage"><h1>example</h1></div>
+        <div class="animage"><h1>example</h1></div>
+        <div class="animage"><h1>example</h1></div>
+    </div>
+  </section>
+  <section>
+    <h2 class="beeg">Misc - this will be a gallery</h2>
+    <div class="anim-misc">
+        <div class="animage"><h1>example</h1></div>
+        <div class="animage"><h1>example</h1></div>
+        <div class="animage"><h1>example</h1></div>
+        <div class="animage"><h1>example</h1></div>
+    </div>
+  </section>
 </Layout>
 
 <style>
-    header {
-        background-color: var(--animColor);
-        height: 200px;
-        
-    }
-</style>
+  header {
+    background-color: var(--animColor);
+    height: 200px;
+  }
 
+  .flex-gallery {
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+    /* flex-flow: row wrap; */
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    
+    height: 100%;
+    
+    gap: 1em;
+  }
+
+  .flex-gallery > * {
+    aspect-ratio: 16/9;
+    min-height: 150px;
+    flex-grow: 1;
+    background-color: #bbdefb;
+    flex-basis: 40%;
+  }
+
+  .anim-misc {
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+    /* flex-flow: row wrap; */
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    
+    height: 100%;
+    
+    gap: 1em;
+  }
+
+  .anim-misc > * {
+    aspect-ratio: 16/9;
+    min-height: 150px;
+    flex-grow: 1;
+    background-color: #79ff82;
+    flex-basis: 100%;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 1em;
+  }
+  h2 {
+    text-align: center;
+    background-color: lightgray;
+    padding: 1em;
+  }
+  .beeg {
+    font-size: 5.5vh;
+  }
+  section {
+    position: relative;
+    margin-top: 2em;
+    align-items: center;
+  }
+  #reel {
+    position: relative;
+    aspect-ratio: 16/9;
+    width: 100%;
+    border: none;
+  }
+</style>

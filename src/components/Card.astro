@@ -8,20 +8,17 @@ interface Props {
   gridAreaM?: string;
 }
 
-const { href, title, color, gridArea, gridAreaM} = Astro.props;
+const { href, title, color, gridArea, gridAreaM } = Astro.props;
 ---
 
-<div id={title} class = "cat">
-  
-
+<div id={title} class="cat">
   <a href={href}>
-    <div class="cat-bg ben-border">
+    <div class="bg ben-border">
       <h2>
         {title}
       </h2>
     </div>
   </a>
-  
 </div>
 
 <style
@@ -32,25 +29,20 @@ const { href, title, color, gridArea, gridAreaM} = Astro.props;
   }}
 >
   .cat {
-
     grid-area: var(--gridArea);
     position: relative;
   }
-    
 
-  .cat >* {
-
+  .cat > * {
     text-decoration: none;
     position: absolute;
     inset: 0;
   }
 
-  .cat-bg {
-    position:absolute;
-    inset:0;
+  .bg {
+    position: absolute;
+    inset: 0;
   }
-
-  
 
   .cat:before {
     content: "";
@@ -59,7 +51,7 @@ const { href, title, color, gridArea, gridAreaM} = Astro.props;
     padding-bottom: 100%;
   }
 
-  .cat-bg {
+  .bg {
     background-color: var(--color);
     background-image: none;
   }

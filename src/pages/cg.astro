@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Gallery from "../components/Gallery.astro";
+import NewGal from '../components/NewGal.astro';
+
 ---
 
 <Layout title="CG Stuff">
@@ -7,7 +10,8 @@ import Layout from '../layouts/Layout.astro';
     <header id="cg-stuff" class="ben-border bg transHeader" transition:name="active-card">
         hello
     </header>
-    Animation!
+    
+    <NewGal />
 </Layout>
 
 <style>
@@ -16,5 +20,7 @@ import Layout from '../layouts/Layout.astro';
         height: 200px;
         
     }
+
+    
 </style>
 

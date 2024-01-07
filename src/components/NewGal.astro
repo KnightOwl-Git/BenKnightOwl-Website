@@ -1,0 +1,35 @@
+---
+import type { ImageMetadata } from "astro";
+import { imageMetadata } from "astro/assets/utils";
+import { Image } from "astro:assets";
+import PostCard from "./PostCard.astro";
+
+const allPosts = await Astro.glob("../posts/blog/*.md");
+---
+
+<p>Womp Womp. It's a gallery.</p>
+<div id="gallery">
+  {
+    allPosts.map((post) => (
+      <PostCard
+        title={post.frontmatter.title}
+        imagePath={post.frontmatter.image.url}
+        altText={post.frontmatter.image.alt}
+      />
+    ))
+  }
+</div>
+<style>
+  #gallery {
+    line-height: 0;
+    column-count: 2;
+    column-gap: 20px;
+  }
+  
+
+  @media (max-width: 600px) {
+    #gallery {
+      /* grid-template-columns: repeat(1, 1fr); */
+    }
+  }
+</style>

@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Gallery from "../components/Gallery.astro";
+import NewGal from '../components/NewGal.astro';
+
+---
+
+<Layout title="Films">
+    <header id="films" class="ben-border bg transHeader" transition:name="active-card">
+        hello
+    </header>
+    Films!
+
+    <Gallery />
+</Layout>
+<style>
+    header {
+        background-color: var(--filmColor);
+        height: 100px;
+        
+    }
+</style>
+

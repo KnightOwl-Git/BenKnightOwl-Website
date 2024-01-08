@@ -5,9 +5,11 @@ import NewGal from '../components/NewGal.astro';
 
 <Layout title="Illustrations">
     <header id="illustrations" class="ben-border bg transHeader" transition:name="active-card">
-        hello
+        <h1>Illustrations</h1>
+        
     </header>
-    Films!
+    <p>Adding more soon!</p>
+  
 
     <NewGal />
 </Layout>
@@ -15,7 +17,13 @@ import NewGal from '../components/NewGal.astro';
 <style>
     header {
         background-color: var(--illusColor);
-        height: 200px;
+        height: 100px;
+        margin-bottom:3em;
         
     }
+    h1 {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 1em;
+  }
 </style>

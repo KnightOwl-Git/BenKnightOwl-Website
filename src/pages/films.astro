@@ -1,22 +1,35 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 import Gallery from "../components/Gallery.astro";
-
 ---
 
 <Layout title="Films">
-    <header id="films" class="ben-border bg transHeader" transition:name="active-card">
-        hello
-    </header>
-    Films!
+  <header
+    id="films"
+    class="ben-border bg transHeader"
+    transition:name="active-card"
+  >
+    <h1>Films</h1>
+  </header>
 
-    <Gallery />
+  <iframe class="ben-border" width="560" height="315" src="https://www.youtube.com/embed/yod2laD2obA?si=eWq9x2gktJWX5gUO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+  <iframe class="ben-border" width="560" height="315" src="https://www.youtube.com/embed/YafqfwipnGM?si=QTiI3piJjLij3NUb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+  <iframe class="ben-border" width="560" height="315" src="https://www.youtube.com/embed/Yx1lJJTx42A?si=Vj-lEb4ORJYyIwJT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+  
 </Layout>
 <style>
-    header {
-        background-color: var(--filmColor);
-        height: 100px;
-        
-    }
-</style>
+  header {
+    background-color: var(--filmColor);
+    height: 100px;
 
+    margin-bottom:3em;
+  }
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 1em;
+  }
+</style>

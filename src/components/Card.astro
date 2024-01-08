@@ -11,6 +11,7 @@ interface Props {
   altText: string;
   transform?: string;
   blendMode?: string;
+  construction?: string;
 
   gridArea: string;
   gridAreaM?: string;
@@ -18,7 +19,7 @@ interface Props {
   opacity?:string;
 }
 
-const { href, title, color, gridArea, gridAreaM, imagePath, altText, transform,blendMode, pointerEvents, opacity} = Astro.props;
+const { href, title, color, gridArea, gridAreaM, imagePath, altText, transform,blendMode, pointerEvents, opacity, construction} = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/CatBGs/*.{jpeg,jpg,png,gif,webp}')
 if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
 
@@ -29,6 +30,8 @@ if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: 
   <a href={href}>
     <div class="bg ben-border">
       <Image id="bgImage" src={images[imagePath]()} alt={altText} />
+      <Image id="construction" src={images["/src/images/CatBGs/construction.png"]()} alt="Under Construction." />
+
       <div id="bgText">
         <h2>
           {altText}
@@ -48,7 +51,8 @@ if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: 
     transform,
     blendMode,
     pointerEvents,
-    opacity
+    opacity,
+    construction
   }}
 >
   .cat {
@@ -83,6 +87,15 @@ if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: 
     pointer-events: none;
     filter: opacity(var(--opacity));
     overflow:hidden;
+    
+  }
+
+  #construction {
+    position: absolute;
+    transform: translate(0, 10%);
+    width: 100%;
+    height: auto;
+    display: var(--construction);
     
   }
 

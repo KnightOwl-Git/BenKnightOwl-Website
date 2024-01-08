@@ -4,10 +4,12 @@ import { imageMetadata } from "astro/assets/utils";
 import { Image } from "astro:assets";
 import PostCard from "./PostCard.astro";
 
+
+
 const allPosts = await Astro.glob("../posts/blog/*.md");
+
 ---
 
-<p>Womp Womp. It's a gallery.</p>
 <div id="gallery">
   {
     allPosts.map((post) => (

@@ -11,7 +11,7 @@ import GLogo from "../images/GLogo.png";
     class="ben-border bg transHeader"
     transition:name="active-card"
   >
-    <h1>Ben's Animation Portfolio</h1>
+    <h1>2D Animation Portfolio</h1>
   </header>
 
   <section>
@@ -29,7 +29,7 @@ import GLogo from "../images/GLogo.png";
         <div class="logoContainer">
           <Image id="NDLogoImage" class="logoImage" src={NDLogo} alt="No Dialogue"></Image>
         </div>
-        <p>Fuck you lauren youre not supposed to look yet</p>
+        <p>No Dialogue is a film about trying to speak. In it, the main character is 2D animated in TVPaint and composited into a 3D environment using Blender and After Effects.</p>
     </div>
     
     <div class="flex-gallery">
@@ -45,7 +45,7 @@ import GLogo from "../images/GLogo.png";
       <div class="logoContainer">
         <Image id="GLogoImage" class="logoImage" src={GLogo} alt="No Dialogue"></Image>
       </div>
-      <p>Fuck you lauren youre not supposed to look yet</p>
+      <p>Gary the Duck is a music video I directed and animated for Greg Blum. I animated the characters in Adobe Animate - lineart by Greg Blum, Maxx Bradley and EV Knight. Background paint by Mahra Peterkin. </p>
   </div>
     <div class="flex-gallery">
         <div class="animage"><h1>example</h1></div>
@@ -55,7 +55,7 @@ import GLogo from "../images/GLogo.png";
     </div>
   </section>
   <section>
-    <h2 class="beeg">Misc - this will be a gallery</h2>
+    <h2 class="beeg">Misc</h2>
     <div class="anim-misc">
         <div class="animage"><h1>example</h1></div>
         <div class="animage"><h1>example</h1></div>
@@ -120,7 +120,7 @@ import GLogo from "../images/GLogo.png";
   h1 {
     text-align: center;
     font-size: 2em;
-    padding-top: 1em;
+    padding-top: 2em;
   }
 
   .gary-yellow {
@@ -147,7 +147,8 @@ import GLogo from "../images/GLogo.png";
   p {
 
     flex: 1 1 50%;
-    min-width: 25ch;
+    
+    font-size: 1.3em;
     
 
   }
@@ -157,6 +158,7 @@ import GLogo from "../images/GLogo.png";
   .logoImage {
     width: 100%;
     height: 100%;
+    object-fit: contain;
     
     
     
@@ -169,6 +171,7 @@ import GLogo from "../images/GLogo.png";
 
   #NDLogoImage {
     mix-blend-mode: multiply;
+    
   }
 
   .beeg {
@@ -189,6 +192,15 @@ import GLogo from "../images/GLogo.png";
   @media (max-width: 700px) {
     .subheader {
       flex-wrap: wrap;
+    }
+    
+    
+  }
+
+  @media (max-width: 1000px) {
+
+    p {
+      font-size: 1em;
     }
     
   }

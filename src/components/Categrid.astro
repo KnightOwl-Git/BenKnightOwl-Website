@@ -13,6 +13,7 @@ import Card from "./Card.astro";
     altText="2D Animation Portfolio"
     transform="translate(0, 50px) scale(135%)"
     blendMode="multiply"
+    construction="none";
     
   />
 
@@ -26,6 +27,8 @@ import Card from "./Card.astro";
     imagePath="/src/images/CatBGs/CGBG.webp"
     altText="CG STUFF"
     blendMode="darken"
+    pointerEvents="none"
+    construction="block";
   />
 
   <Card
@@ -33,21 +36,21 @@ import Card from "./Card.astro";
     href="/films"
     color="var(--filmColor)"
     gridArea="Films"
-    gridAreaM="2 / 2 / 3 / 3"
     imagePath="/src/images/CatBGs/FilmBG.png"
     altText="Films"
     blendMode="overlay"
+    construction="none";
   />
   <Card
     title="illustrations"
     href="/illustrations"
     color="#82c926;"
     gridArea="Illus"
-    gridAreaM="3 / 2 / 5 / 3"
     imagePath="/src/images/CatBGs/IlBG.jpeg"
     altText="Illustrations"
     blendMode="overlay"
-    transform="scale(135%)"
+    transform="translate(-3%, 5%) scale(120%)"
+    construction="none";
   />
 
   <Card
@@ -55,11 +58,12 @@ import Card from "./Card.astro";
     href="/life-drawings"
     color="var(--ldColor)"
     gridArea="LD"
-    gridAreaM="3 / 2 / 4 / 3"
-    imagePath="/src/images/CatBGs/AnimBG.webp"
+    imagePath="/src/images/CatBGs/LDBG.jpg"
     altText="Life Drawing"
-    blendMode="multiply"
+    blendMode="screen"
     pointerEvents="none"
+    construction="block";
+    transform="translate(6%, 20%) scale(1.5)"
   />
 
   <Card
@@ -67,10 +71,11 @@ import Card from "./Card.astro";
     href="https://www.youtube.com/@knightowl_art"
     color="var(--vidColor)"
     gridArea="Videos"
-    gridAreaM="5 / 2 / 6 / 3"
-    imagePath="/src/images/CatBGs/AnimBG.webp"
+    imagePath="/src/images/CatBGs/VidBG.webp"
     altText="Videos"
-    blendMode="multiply"
+    blendMode="overlay"
+    transform="translate(1%, 8%) scale(1.15)"
+    construction="none";
   />
 
   <Card
@@ -78,9 +83,10 @@ import Card from "./Card.astro";
     href="/music"
     color="var(--musicColor)"
     gridArea="Music"
-    imagePath="/src/images/CatBGs/AnimBG.webp"
+    imagePath="/src/images/CatBGs/MusicBG.webp"
     altText="Music"
-    blendMode="multiply"
+    blendMode="overlay"
+    opacity="0.4"
     pointerEvents="none"
   />
 </div>
@@ -88,9 +94,6 @@ import Card from "./Card.astro";
 <style>
   .ben-grid {
     flex: 1 1 62%;
-    /* grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr; */
-
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 
@@ -106,8 +109,6 @@ import Card from "./Card.astro";
 
   @media (max-width: 800px) {
     .ben-grid {
-      /* grid-template-columns: repeat(2, 1fr); */
-      /* gap: 1%; */
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 

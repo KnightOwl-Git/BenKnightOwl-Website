@@ -1,22 +1,41 @@
 ---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+
 interface Props {
   title: string;
   color: string;
   href: string;
+  imagePath: string;
+  altText: string;
+  transform?: string;
+  blendMode?: string;
 
   gridArea: string;
   gridAreaM?: string;
+  pointerEvents?: string;
+  opacity?:string;
 }
 
-const { href, title, color, gridArea, gridAreaM } = Astro.props;
+const { href, title, color, gridArea, gridAreaM, imagePath, altText, transform,blendMode, pointerEvents, opacity} = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/CatBGs/*.{jpeg,jpg,png,gif,webp}')
+if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
+
+
 ---
 
 <div id={title} class="cat">
   <a href={href}>
     <div class="bg ben-border">
-      <h2>
-        {title}
-      </h2>
+      <Image id="bgImage" src={images[imagePath]()} alt={altText} />
+      <div id="bgText">
+        <h2>
+          {altText}
+        </h2>
+      </div>
+      
+
     </div>
   </a>
 </div>
@@ -26,39 +45,66 @@ const { href, title, color, gridArea, gridAreaM } = Astro.props;
     color,
     gridArea,
     gridAreaM,
+    transform,
+    blendMode,
+    pointerEvents,
+    opacity
   }}
 >
   .cat {
     grid-area: var(--gridArea);
     position: relative;
+    padding-bottom: 48.5%;
+    pointer-events: var(--pointerEvents);
+    
+    
+   
   }
 
-  .cat > * {
-    text-decoration: none;
-    position: absolute;
-    inset: 0;
+  #bgText {
+    position: relative;
+    text-align: center;
+    padding: 2ch;
+
   }
 
   .bg {
     position: absolute;
     inset: 0;
+   
   }
 
-  .cat:before {
+  #bgImage {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    transform: var(--transform);
+    mix-blend-mode: var(--blendMode);
+    pointer-events: none;
+    filter: opacity(var(--opacity));
+    overflow:hidden;
+    
+  }
+
+  /* .cat:before {
     content: "";
     display: block;
     position: relative;
     padding-bottom: 100%;
-  }
+  } */
 
   .bg {
     background-color: var(--color);
     background-image: none;
   }
 
-  @media (max-width: 800px) {
+  h2 {
+    mix-blend-mode:multiply;
+  }
+
+  /* @media (max-width: 800px) {
     .cat {
       grid-area: var(--gridAreaM);
     }
-  }
+  } */
 </style>

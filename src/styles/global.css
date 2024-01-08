@@ -1,94 +1,92 @@
-
-
 .ben-border {
   -webkit-mask-box-image-source: url(/Border.webp);
   -webkit-mask-box-image-slice: 142 fill;
   -webkit-mask-box-image-width: 1.4rem;
   -webkit-mask-box-image-outset: 1em;
   -webkit-mask-box-image-repeat: repeat;
+
+  /* the webkit ones can theoretically be removed eventually */
+
+  mask-border: url(/Border.webp);
+  mask-border-slice: 142 fill;
+  mask-border-width: 1.4rem;
+  mask-border-outset: 1em;
+  mask-border-repeat: repeat;
 }
 
 .ben-flex {
-gap:1rem;
-display:flex;
-align-content:stretch;
-flex-direction:row;
-justify-content:center;
-align-self:auto;
-align-items:stretch;
-flex:0 1 auto;
-flex-wrap:wrap;
+  gap: 1rem;
+  display: flex;
+  align-content: stretch;
+  flex-direction: row;
+  justify-content: center;
+  align-self: auto;
+  align-items: stretch;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
 }
-
 
 :root {
---animColor: #ffcd7b;
---cgColor: #d7fc9a;
---filmColor: #00fcdb;
---ldColor: #00fc8b;
---illusColor: #b1fc4f;
---musicColor: rgba(169, 137, 255, 1);
---vidColor: rgba(154, 236, 255, 1);
+  --animColor: #ffcd7b;
+  --cgColor: #d7fc9a;
+  --filmColor: #00fcdb;
+  --ldColor: #00fc8b;
+  --illusColor: #b1fc4f;
+  --musicColor: rgba(169, 137, 255, 1);
+  --vidColor: rgba(154, 236, 255, 1);
 
---gap:1em;
+  --gap: 1em;
 
---section-gap:2em;
-
+  --section-gap: 2em;
 }
 
-
-
-/* Handle aspect ratio changes */
-
-
 ::view-transition-group(active-card) {
-z-index: 50;
+  z-index: 50;
 
-animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-duration: 0.3s;
 
--webkit-mask-box-image-source: url(/Border.webp);
+  -webkit-mask-box-image-source: url(/Border.webp);
   -webkit-mask-box-image-slice: 142 fill;
   -webkit-mask-box-image-width: 1.4rem;
   -webkit-mask-box-image-outset: 1em;
   -webkit-mask-box-image-repeat: repeat;
+  mask-border: url(/Border.webp);
+  mask-border-slice: 142 fill;
+  mask-border-width: 1.4rem;
+  mask-border-outset: 1em;
+  mask-border-repeat: repeat;
 }
-
-
-
-
-
 
 ::view-transition-old(active-card),
 ::view-transition-new(active-card) {
-/* Prevent the default animation,
-so both views remain opacity:1 throughout the transition */
+  /* Prevent the default animation,
+  so both views remain opacity:1 throughout the transition */
 
-animation: none;
+  animation: none;
 
-/* Use normal blending,
-so the new view sits on top and obscures the old view */
+  /* Use normal blending,
+  so the new view sits on top and obscures the old view */
 
-mix-blend-mode: normal;
+  mix-blend-mode: normal;
 
-/* Make the height the same as the group,
-meaning the view size might not match its aspect-ratio. */
-height: 100%;
-/* Clip any overflow of the view */
-overflow: clip;
-
+  /* Make the height the same as the group,
+  meaning the view size might not match its aspect-ratio. */
+  height: 100%;
+  /* Clip any overflow of the view */
+  overflow: clip;
 }
 
 /* The old view is the thumbnail */
 ::view-transition-old(active-card) {
-/* Maintain the aspect ratio of the view,
-by shrinking it to fit within the bounds of the element */
-object-fit: contain;
+  /* Maintain the aspect ratio of the view,
+  by shrinking it to fit within the bounds of the element */
+  object-fit: contain;
 }
 
 /* The new view is the full image */
 ::view-transition-new(active-card) {
-/* Maintain the aspect ratio of the view,
-by growing it to cover the bounds of the element */
-object-fit: cover;
+  /* Maintain the aspect ratio of the view,
+  by growing it to cover the bounds of the element */
+  object-fit: cover;
 }

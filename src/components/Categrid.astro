@@ -1,86 +1,122 @@
 ---
 import type Anim from "../pages/anim.astro";
 import Card from "./Card.astro";
-
 ---
 
-
 <div class="ben-grid">
-
-    <Card 
-    title="anim"; href="/anim"; color= "var(--animColor)";
-    gridArea="1 / 1 / 3 / 2";
-    gridAreaM="1 / 1 / 3 / 2";
+  <Card
+    title="anim"
+    href="/anim"
+    color="var(--animColor)"
+    gridArea="Anim"
+    imagePath="/src/images/CatBGs/AnimBG.webp"
+    altText="2D Animation Portfolio"
+    transform="translate(0, 50px) scale(135%)"
+    blendMode="multiply"
     
   />
-  
 
-  <Card 
-    title="cg-stuff"; href="/cg"; color= "var(--cgColor)";
-    gridArea= "1 / 2 / 2 / 3";
-    gridAreaM= "1 / 2 / 2 / 3";
+  <Card
+    title="cg-stuff"
+    
+    href="/cg"
+    
+    color="var(--cgColor)"
+    gridArea="CG"
+    imagePath="/src/images/CatBGs/CGBG.webp"
+    altText="CG STUFF"
+    blendMode="darken"
   />
 
   <Card
-
-    title="films"; href="/films"; color= "var(--filmColor)";
-    gridArea= "1 / 3 / 2 / 4";
-    gridAreaM= "2 / 2 / 3 / 3";
-
+    title="films"
+    href="/films"
+    color="var(--filmColor)"
+    gridArea="Films"
+    gridAreaM="2 / 2 / 3 / 3"
+    imagePath="/src/images/CatBGs/FilmBG.png"
+    altText="Films"
+    blendMode="overlay"
   />
   <Card
-
-    title="illustrations"; href="/illustrations"; color= "var(--illusColor)";
-    gridArea= "2 / 2 / 4 / 3";
-    gridAreaM= "3 / 2 / 5 / 3";
-
-  />
-
-  <Card
-
-    title="life-drawing"; href="/life-drawings"; color= "var(--ldColor)";
-    gridArea= "2 / 3 / 3 / 4";
-    gridAreaM= "3 / 1 / 4 / 2";
-
-  />
-
-  <Card
-
-    title="videos"; href="/videos"; color= "var(--vidColor)";
-    gridArea= "3 / 1 / 4 / 2";
-    gridAreaM= "5 / 2 / 6 / 3";
-
+    title="illustrations"
+    href="/illustrations"
+    color="#82c926;"
+    gridArea="Illus"
+    gridAreaM="3 / 2 / 5 / 3"
+    imagePath="/src/images/CatBGs/IlBG.jpeg"
+    altText="Illustrations"
+    blendMode="overlay"
+    transform="scale(135%)"
   />
 
   <Card
+    title="life-drawing"
+    href="/life-drawings"
+    color="var(--ldColor)"
+    gridArea="LD"
+    gridAreaM="3 / 2 / 4 / 3"
+    imagePath="/src/images/CatBGs/AnimBG.webp"
+    altText="Life Drawing"
+    blendMode="multiply"
+    pointerEvents="none"
+  />
 
-    title="music"; href="/music"; color= "var(--musicColor)";
-    gridArea= "3 / 3 / 4 / 4";
-    gridAreaM= "4 / 1 / 5 / 2";
+  <Card
+    title="videos"
+    href="https://www.youtube.com/@knightowl_art"
+    color="var(--vidColor)"
+    gridArea="Videos"
+    gridAreaM="5 / 2 / 6 / 3"
+    imagePath="/src/images/CatBGs/AnimBG.webp"
+    altText="Videos"
+    blendMode="multiply"
+  />
 
+  <Card
+    title="music"
+    href="/music"
+    color="var(--musicColor)"
+    gridArea="Music"
+    imagePath="/src/images/CatBGs/AnimBG.webp"
+    altText="Music"
+    blendMode="multiply"
+    pointerEvents="none"
   />
 </div>
 
 <style>
-
-
   .ben-grid {
     flex: 1 1 62%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    gap: 0.5rem;
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr; */
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    grid-template-areas:
+      "Anim CG Films"
+      "Anim Illus Illus"
+      "Videos LD Music";
+
+    gap: 0.7rem;
     align-self: flex-start;
     display: grid;
   }
 
   @media (max-width: 800px) {
-  
     .ben-grid {
-      grid-template-columns: repeat(2, 1fr);
+      /* grid-template-columns: repeat(2, 1fr); */
       /* gap: 1%; */
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 
+      grid-template-areas:
+        "Anim CG"
+        "Anim Films"
+        "Illus Illus"
+        "Videos LD"
+        "Music ___";
     }
-    
   }
 </style>
-

@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import NDLogo from "../images/NDLogo.png";
+import GLogo from "../images/GLogo.png";
 ---
 
 <Layout title="Animation">
@@ -15,13 +18,20 @@ import Layout from "../layouts/Layout.astro";
     <iframe
       id="reel"
       class="ben-border"
-      src="https://www.youtube.com/embed/bHpwbX5BLI4?si=aMrubz5ftCasX4dA"
+      src="https://www.youtube.com/embed/1PRdY31EC3o?si=WdTPNchFfUm4upSi" 
+      title="YouTube video player" 
     ></iframe>
-    <h2 class="ben-border">Reel</h2>
+    <h2 class="ben-border">2D Animation Reel</h2>
   </section>
   <br/>
   <section>
-    <h2 class="beeg">NO DIALOGUE.</h2>
+    <div class="subheader ben-border">
+        <div class="logoContainer">
+          <Image id="NDLogoImage" class="logoImage" src={NDLogo} alt="No Dialogue"></Image>
+        </div>
+        <p>NO DIALOGUE. is a film about trying to speak. Inspired by the BFA1 film restriction of not being allowed to have any voice acting, the</p>
+    </div>
+    
     <div class="flex-gallery">
         <div class="animage"><h1>example</h1></div>
         <div class="animage"><h1>example</h1></div>
@@ -31,7 +41,12 @@ import Layout from "../layouts/Layout.astro";
     
   </section>
   <section>
-    <h2 class="beeg">Gary the Duck</h2>
+    <div class="subheader gary-yellow ben-border">
+      <div class="logoContainer">
+        <Image id="GLogoImage" class="logoImage" src={GLogo} alt="No Dialogue"></Image>
+      </div>
+      <p>NO DIALOGUE. is a film about trying to speak. Inspired by the BFA1 film restriction of not being allowed to have any voice acting, the</p>
+  </div>
     <div class="flex-gallery">
         <div class="animage"><h1>example</h1></div>
         <div class="animage"><h1>example</h1></div>
@@ -107,17 +122,61 @@ import Layout from "../layouts/Layout.astro";
     font-size: 2em;
     padding-top: 1em;
   }
-  h2 {
-    text-align: center;
-    background-color: lightgray;
-    padding: 1em;
+
+  .gary-yellow {
+    background-color: rgb(117, 241, 231) !important;
   }
+  .subheader {
+    
+    background-color: lightgray;
+    padding: 2em;
+    margin-bottom: 1em;
+    display: flex;
+    
+    
+    gap: 2%;
+  }
+
+  .logoContainer {
+    
+    flex: 1 1 50%;
+    
+   
+  }
+
+  p {
+
+    flex: 1 1 50%;
+    min-width: 25ch;
+    
+
+  }
+
+  
+
+  .logoImage {
+    width: 100%;
+    height: 100%;
+    
+    
+    
+    
+  }
+
+  #GLogoImage {
+    filter:drop-shadow(0 0 0.55rem rgb(93, 101, 148));
+  }
+
+  #NDLogoImage {
+    mix-blend-mode: multiply;
+  }
+
   .beeg {
     font-size: 5.5vh;
   }
   section {
     position: relative;
-    margin-top: 2em;
+    margin-top: 5em;
     align-items: center;
   }
   #reel {
@@ -126,4 +185,13 @@ import Layout from "../layouts/Layout.astro";
     width: 100%;
     border: none;
   }
+
+  @media (max-width: 700px) {
+    .subheader {
+      flex-wrap: wrap;
+    }
+    
+  }
+
+  
 </style>

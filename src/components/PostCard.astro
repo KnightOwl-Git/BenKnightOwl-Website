@@ -13,11 +13,11 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/posts/blog/img
 ---
 
 
-  <img src={imagePath} alt={altText}/>
-  <!-- {title} -->
+<Image id="post" src={images[imagePath]()} alt={altText} />
+<!-- {title} -->
 
 <style>
-  img {
+  #post {
     width: 100% !important;
     height: auto !important;
     margin-bottom: 20px;

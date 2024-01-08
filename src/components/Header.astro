@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import HeaderBG from "../images/WebWater.webp";
 ---
 <p id="firefox">Hi hello. This site doesn't look good on firefox. Just letting you know. ok bye. I love you.</p>
-
+<p>Site under construction! Check back in the next few days. Coding is hard.</p>
 <div class="header" transition:persist>
   <div id="logo" class="ben-border">
     <div class="lcontain">
@@ -42,6 +42,7 @@ import HeaderBG from "../images/WebWater.webp";
   }
 
   #about {
+    display: none;
     width: 15%;
     aspect-ratio: 1/1.4;
     min-width: 150px;
@@ -88,14 +89,34 @@ import HeaderBG from "../images/WebWater.webp";
     pointer-events: none;
   }
 
-  #email {
-    position: relative;
+  a {
+    text-decoration: none;
+  }
 
+  #email {
+    
+    
+    text-align: right;
     margin-bottom:;
     color: hsl(177, 35%, 38%);
     font-weight: 700;
-    font-size: 50%;
+    
   }
+
+
+  #email::after {
+    content: " ";
+  }
+
+  #email:hover:after {
+    font-weight: 500;
+    cursor:text;
+    user-select: text;
+    content: "  (hold 'alt' to highlight)";
+    
+  }
+
+
 
   .lcontain {
     display: flex;

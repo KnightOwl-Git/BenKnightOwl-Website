@@ -18,43 +18,78 @@ import GLogo from "../images/GLogo.png";
     <iframe
       id="reel"
       class="ben-border"
-      src="https://www.youtube.com/embed/1PRdY31EC3o?si=WdTPNchFfUm4upSi" 
-      title="YouTube video player" 
-    ></iframe>
-    <h2 class="ben-border">2D Animation Reel</h2>
+      src="https://www.youtube.com/embed/1PRdY31EC3o?si=WdTPNchFfUm4upSi"
+      title="YouTube video player"></iframe>
   </section>
-  <br/>
   <section>
-    <div class="subheader ben-border">
+    <div class="subheader-color ben-border">
+      <div class="subheader">
         <div class="logoContainer">
-          <Image id="NDLogoImage" class="logoImage" src={NDLogo} alt="No Dialogue"></Image>
+          <Image
+            id="NDLogoImage"
+            class="logoImage"
+            src={NDLogo}
+            alt="No Dialogue"
+          />
         </div>
-        <p>No Dialogue is a film about trying to speak. In it, the main character is 2D animated in TVPaint and composited into a 3D environment using Blender and After Effects.</p>
-    </div>
-    
-    <div class="flex-gallery">
-        <div class="animage"><h1>example</h1></div>
-        <div class="animage"><h1>example</h1></div>
-        <div class="animage"><h1>example</h1></div>
-        <div class="animage"><h1>example</h1></div>
-    </div>
-    
-  </section>
-  <section>
-    <div class="subheader gary-yellow ben-border">
-      <div class="logoContainer">
-        <Image id="GLogoImage" class="logoImage" src={GLogo} alt="No Dialogue"></Image>
+        <p>
+          No Dialogue is a film about trying to speak. In it, the main character
+          is 2D animated in TVPaint and composited into a 3D environment using
+          Blender and After Effects. Process gifs Coming Soon :)
+        </p>
       </div>
-      <p>Gary the Duck is a music video I directed and animated for Greg Blum. I animated the characters in Adobe Animate - lineart by Greg Blum, Maxx Bradley and EV Knight. Background paint by Mahra Peterkin. </p>
-  </div>
-    <div class="flex-gallery">
-        <div class="animage"><h1>example</h1></div>
-        <div class="animage"><h1>example</h1></div>
-        <div class="animage"><h1>example</h1></div>
-        <div class="animage"><h1>example</h1></div>
+      <iframe
+      class="ben-border"
+      src="https://www.youtube.com/embed/yod2laD2obA?si=eWq9x2gktJWX5gUO"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+
+      
     </div>
+    
+
+    <!-- <div class="flex-gallery">
+        <div class="animage"><h1>example</h1></div>
+        <div class="animage"><h1>example</h1></div>
+        <div class="animage"><h1>example</h1></div>
+        <div class="animage"><h1>example</h1></div>
+    </div> -->
   </section>
   <section>
+    <div class="subheader-color gary-yellow ben-border">
+      <div class="subheader">
+        <div class="logoContainer">
+          <Image
+            id="GLogoImage"
+            class="logoImage"
+            src={GLogo}
+            alt="No Dialogue"
+          />
+        </div>
+        <p>
+          Gary the Duck is a music video I directed and animated for Greg Blum. I
+          animated the characters in Adobe Animate - lineart by Greg Blum, Maxx
+          Bradley and EV Knight. Background paint by Mahra Peterkin.
+        </p>
+        
+    </div>
+    <iframe class="ben-border" src="https://www.youtube.com/embed/YafqfwipnGM?si=QTiI3piJjLij3NUb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    
+
+      
+    </div>
+    <!-- <div class="flex-gallery">
+        <div class="animage"><h1>example</h1></div>
+        <div class="animage"><h1>example</h1></div>
+        <div class="animage"><h1>example</h1></div>
+        <div class="animage"><h1>example</h1></div>
+    </div> -->
+  </section>
+
+  <!-- <section>
     <h2 class="beeg">Misc</h2>
     <div class="anim-misc">
         <div class="animage"><h1>example</h1></div>
@@ -62,7 +97,7 @@ import GLogo from "../images/GLogo.png";
         <div class="animage"><h1>example</h1></div>
         <div class="animage"><h1>example</h1></div>
     </div>
-  </section>
+  </section> -->
 </Layout>
 
 <style>
@@ -80,9 +115,8 @@ import GLogo from "../images/GLogo.png";
     flex-direction: row;
     flex-wrap: wrap;
 
-    
     height: 100%;
-    
+
     gap: 1em;
   }
 
@@ -103,9 +137,8 @@ import GLogo from "../images/GLogo.png";
     flex-direction: row;
     flex-wrap: wrap;
 
-    
     height: 100%;
-    
+
     gap: 1em;
   }
 
@@ -126,52 +159,46 @@ import GLogo from "../images/GLogo.png";
   .gary-yellow {
     background-color: rgb(117, 241, 231) !important;
   }
-  .subheader {
-    
+
+  .subheader-color {
     background-color: lightgray;
     padding: 2em;
     margin-bottom: 1em;
+  }
+  .subheader {
+    
     display: flex;
-    
-    
+
     gap: 2%;
   }
 
   .logoContainer {
-    
     flex: 1 1 50%;
-    
-   
   }
 
   p {
-
     flex: 1 1 50%;
-    
+
     font-size: 1.3em;
-    
-
   }
-
-  
 
   .logoImage {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    
-    
-    
-    
+  }
+
+  iframe {
+    aspect-ratio: 16/9;
+    width: 100%;
   }
 
   #GLogoImage {
-    filter:drop-shadow(0 0 0.55rem rgb(93, 101, 148));
+    filter: drop-shadow(0 0 0.55rem rgb(93, 101, 148));
   }
 
   #NDLogoImage {
     mix-blend-mode: multiply;
-    
   }
 
   .beeg {
@@ -193,17 +220,11 @@ import GLogo from "../images/GLogo.png";
     .subheader {
       flex-wrap: wrap;
     }
-    
-    
   }
 
   @media (max-width: 1000px) {
-
     p {
       font-size: 1em;
     }
-    
   }
-
-  
 </style>

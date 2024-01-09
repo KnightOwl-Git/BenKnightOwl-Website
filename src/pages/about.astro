@@ -1,8 +1,71 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import MePic from "/src/images/Me.jpeg";
 ---
 
-<Layout title="About" >
-    <h1>hi</h1>
-    
+<Layout title="About">
+  <div id="aboutWrapper">
+    <div id="meWrap">
+        <Image id="me" src={MePic} alt="A lovely drawing of me"></Image>
+    </div>
+    <div id="text">
+      <h1>Oh, Hi! Hello! Well hello there! Hey there!</h1>
+      <p>
+        I'm Ben, an artist in the business of making stuff move. Currently a
+        BFA2 Student at CalArts, I’m passionate about 2D animation,
+        experimenting with 3D tools, and compositing.
+      </p>
+      <p>
+        My films Gary the Duck and NO DIALOGUE have been screened at film
+        festivals like the Los Angeles Animation Festival and the New York Int’l
+        Children’s Film Festival. NO DIALOGUE was selected for the CalArts
+        Producers’ Show in 2023. In my free time I like making music, eductional youtube videos, and coding
+        stuff like this website!
+      </p>
+    <p>Contact me at benknight@alum.calarts.edu</p>
+    <a href="https://docs.google.com/document/d/1KxJnToj6zXXJPPCvgXBlZLaz6DsAjA9q2-B9kMLJLZI">My resume</a>
+    </div>
+  </div>
 </Layout>
+
+<style>
+  p {
+    max-width: 70ch;
+  }
+  #text {
+    
+    flex: 1 1 50%;
+    
+  }
+  #aboutWrapper {
+    
+    display: flex;
+    margin: auto;
+    width: 90%;
+    gap: 3em;
+    flex-wrap: wrap;
+    margin-top: 2em;
+  }
+
+  #meWrap {
+    
+    flex: 1 1 40%;
+
+    
+    
+    margin-left: auto;
+    margin-right: 0;
+
+
+  }
+
+  #me {
+    object-fit: contain;
+
+    width: 100%;
+    height: 100%;
+    
+
+  }
+</style>

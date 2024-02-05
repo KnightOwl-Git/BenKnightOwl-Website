@@ -2,14 +2,18 @@
 import { Image } from "astro:assets";
 import HeaderBG from "../images/WebWater.webp";
 ---
-<p id="firefox">Hi hello. This site doesn't look good on firefox. Just letting you know. ok bye. I love you.</p>
-<p>Site under construction! Check back in the next few days. Coding is hard.</p>
+
+<p id="firefox">
+  Hi hello. This site doesn't look good on firefox. Just letting you know. ok
+  bye. I love you.
+</p>
+<!-- <p>Site under construction! Check back in the next few days. Coding is hard.</p> -->
 <div class="header" transition:persist>
   <div id="logo" class="ben-border">
     <div class="lcontain">
       <a href="/" class="lcontain">
         <img id="logoLogo" src="/LogoLogo.png" ) alt="Ben logo" />
-        <p id="email">benknight@alum.calarts.edu</p>
+        <p><b>Click Here for the Home Page</b></p>
       </a>
     </div>
   </div>
@@ -17,7 +21,14 @@ import HeaderBG from "../images/WebWater.webp";
     <a href="/about" id="aboutLink">
       <img id="benstamp" src="/benStamp.png" ) alt="Ben stamp" />
     </a>
-    
+    <p class="email">benknight@alum.calarts.edu</p>
+    <ul class="links">
+      <li><a href="https://www.youtube.com/@knightowl_art"><img class="icon" src="YouTube.svg" alt="Youtube Icon">
+      </a></li>
+      <li><a href="https://www.instagram.com/knightowl_art/"><img class="icon" src="Insta.svg" alt="Instagram Icon"></a></li>
+      <li><a href="https://www.linkedin.com/in/benknightowl"><img class="icon" src="LinkedIn.svg" alt="LinkedIn Icon"></a></li>
+
+    </ul>
   </div>
 </div>
 
@@ -27,6 +38,24 @@ import HeaderBG from "../images/WebWater.webp";
     font-size: 2rem;
     padding: 1rem;
     flex: 1 1 100%;
+  }
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+    height: 14%;
+  }
+
+  li {
+    display: block;
+    flex: 1 1 33%;
+    
+    
+  }
+
+  .icon {
+    width: 100%;
+    transform: translate(0,-20%);
   }
 
   .header {
@@ -91,30 +120,16 @@ import HeaderBG from "../images/WebWater.webp";
     text-decoration: none;
   }
 
-  #email {
-    
-    
+  p {
     text-align: right;
     margin-bottom:;
     color: hsl(177, 35%, 38%);
-    font-weight: 700;
-    
   }
 
-
-  #email::after {
-    content: " ";
+  .email {
+    font-size: small;
+    transform: translateY(-40%);
   }
-
-  #email:hover:after {
-    font-weight: 500;
-    cursor:text;
-    user-select: text;
-    content: "  (hold 'alt' to highlight)";
-    
-  }
-
-
 
   .lcontain {
     display: flex;
@@ -130,6 +145,10 @@ import HeaderBG from "../images/WebWater.webp";
     object-fit: cover;
   }
 
+  .links {
+    display: flex;
+  }
+
   /* @media (max-width:480px){
     .header {
       flex-direction: column;
@@ -141,7 +160,7 @@ import HeaderBG from "../images/WebWater.webp";
   }
   @-moz-document url-prefix() {
     #firefox {
-    display:block;
+      display: block;
+    }
   }
-}
 </style>

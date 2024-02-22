@@ -25,28 +25,23 @@ const { title } = Astro.props;
 		<ViewTransitions  fallback="none"/>
 	</head>
 	<body>
-		<section id="site-container">
-			<div id="site-wrapper">
-				<Header transition:persist/>
-				<div id="spacer"></div>
-				<slot />
-				<div id="spacer"></div>
-				<Footer />
-			</div>
-		</section>
+		<div id="site-wrapper">
+			<Header transition:persist/>
+			<div id="spacer"></div>
+			<slot />
+			<div id="spacer"></div>
+			<Footer />
+		</div>
 	</body>
 </html>
 
 
 <style is:global>
-	#site-container {
-		display:flex;
-		padding: 50px 0;
-	}
 	#site-wrapper{
 		width:90%;
-		margin:0 auto;
+		margin: 5% auto;
 		max-width:1200px;
+		overflow: hidden;
 	}
 
 	html {

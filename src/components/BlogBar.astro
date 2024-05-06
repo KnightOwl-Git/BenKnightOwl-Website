@@ -1,0 +1,85 @@
+---
+const allPosts = await Astro.glob('../pages/posts/*.md');
+---
+
+<aside id = "blogBar" class="ben-border">
+    <p class="blog">NEWS</p>
+
+    <div id="PostList">
+        {allPosts.map((post) => 
+            <li>
+        
+            <a href = {post.url}>
+                <img class="postImg" src={post.frontmatter.image.url} width="100%" alt={post.frontmatter.image.alt} />
+
+                <h2>{post.frontmatter.title}</h2>
+                <p>{post.frontmatter.description}</p>
+            </a>
+            </li>)}
+
+    </div>
+
+
+  
+</aside>
+
+<style>
+
+    #blogBar {
+        height: 90vh;
+        overflow: scroll;
+        background-color: var(--blogColor);
+
+
+    }
+    #PostList {
+        margin-inline: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    li {
+        list-style: none;
+    }
+    .blog {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 50px;
+    padding: none;
+    margin:none;
+    text-decoration: underline dotted;
+    -webkit-text-decoration: dotted;
+    -webkit-text-decoration-line:  underline !important;
+    text-underline-offset: 0.2em;
+
+
+  }
+
+  a {
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    color:black;
+
+  }
+
+  aside {
+    position: sticky;
+    /* display: flex; */
+ 
+    flex: 0.5 1 160px;
+  }
+
+  .postImg {
+    filter: saturate(0%);
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: 0.4em;
+    border-style: solid;
+    border-color: grey;
+  }
+
+  h2 {
+    font-weight: normal;
+  }
+</style>

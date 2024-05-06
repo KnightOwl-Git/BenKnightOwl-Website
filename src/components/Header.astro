@@ -13,12 +13,14 @@ import HeaderBG from "../images/WebWater.webp";
       <a href="/" class="lcontain">
         <img id="logoLogo" src="/LogoLogo.png" ) alt="Ben logo" />
         <p><b>Animator and Digital Artist</b></p>
+        <p class="email2"><a href="mailto:benknight@alum.calarts.edu">benknight@alum.calarts.edu</a></p>
+
       </a>
 
     </div>
   </div>
   <div id="about">
-    <p class="email"><b>benknight@alum.calarts.edu</b></p>
+    <!-- <p class="email"><b>benknight@alum.calarts.edu</b></p> -->
 
     <a href="/about" id="aboutLink">
 
@@ -139,11 +141,24 @@ import HeaderBG from "../images/WebWater.webp";
     z-index: 5;
     mix-blend-mode:difference;
     padding: 0% 0% 10% 0%;
+  }
+
+  .email2 {
+    position: absolute;
+    padding: 1em;
+    top:0;
+    left:1em;
+    cursor: crosshair;
+    
+    /* why aint this working */
+      color:hsl(177, 35%, 38%);
     
     
   }
 
+
   .lcontain {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -2,13 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Categrid from "../components/Categrid.astro";
+import BlogBar from "../components/BlogBar.astro";
 ---
 
 <Layout title="Ben's Internet Home!">
   <main class="ben-flex">
     <Categrid />
 
-    <!-- <aside class="ben-border">Recent Projects</aside> -->
+    <BlogBar />
+    
   </main>
 </Layout>
 
@@ -22,33 +24,15 @@ import Categrid from "../components/Categrid.astro";
     display: flex;
   }
 
+
+
   a {
     display: block;
     height: 100%;
     width: 100%;
   }
 
-  aside {
-    position: sticky;
-    /* display: flex; */
-    display: none;
-    align-self: flex-start;
-    background-image: linear-gradient(
-      rgba(180, 180, 180, 0.5) 1%,
-      rgba(180, 180, 180, 0.5) 100%
-    );
-    background-position: 0px 0px;
-    background-size: 100% 100%;
-    background-repeat: repeat;
-    background-attachment: scroll;
-    background-origin: padding-box;
-    height: 66vh;
-    top: 2em;
-    flex: 1 1 0%;
-    min-width: 114px;
-    justify-content: flex-start;
-    align-items: stretch;
-  }
+
 
   .main {
     display: flex;

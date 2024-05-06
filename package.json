@@ -12,7 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.3.2",
     "@astrojs/prefetch": "latest",
-    "astro": "^4.0.4",
+    "astro": "^4.5.3",
     "sharp": "^0.33.0-alpha.11",
     "squoosh": "^0.0.0",
     "typescript": "^5.2.2"

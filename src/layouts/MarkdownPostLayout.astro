@@ -1,0 +1,56 @@
+---
+const { frontmatter } = Astro.props;
+import Layout from '../layouts/Layout.astro';
+import BlogBar from '../components/BlogBar.astro';
+---
+
+<Layout title={frontmatter.title}>
+    
+    <div id="page">
+        
+        <div id="post">
+            <header class= "ben-border">
+                <h1>{frontmatter.title}</h1>
+
+            </header>
+    
+  
+
+            <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
+            <!-- <p><em>{frontmatter.description}</em></p> -->
+            <p>Written by: {frontmatter.author}</p>
+            <!-- <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} /> -->
+            <slot />
+        </div>
+        
+        <BlogBar />
+    </div>
+</Layout>
+
+<style>
+    #page {
+        display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-direction: row;
+    min-height: auto;
+    padding: 10px 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    }
+
+    #post {
+        display: block;
+        flex: 1 1 62%;
+        padding-right: 5%;
+        max-width: 70ch;
+    }
+
+    header {
+        background-color:var(--blogColor);
+        padding: 1em;
+    }
+</style>
+
+

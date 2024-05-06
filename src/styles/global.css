@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+
 .ben-border {
   -webkit-mask-box-image-source: url(/Border.webp);
   -webkit-mask-box-image-slice: 142 fill;
@@ -12,6 +17,22 @@
   mask-border-width: 1.4rem;
   mask-border-outset: 1em;
   mask-border-repeat: repeat;
+}
+
+.news-border {
+  -webkit-mask-box-image-source: url(/newspaper.png);
+  -webkit-mask-box-image-slice: 228 142 185 142 fill;
+  -webkit-mask-box-image-width: 20px 20px 20px 20px;
+  -webkit-mask-box-image-outset: 0.5em;
+  -webkit-mask-box-image-repeat: round round;
+
+  /* the webkit ones can theoretically be removed eventually */
+
+  mask-border: url(/Border.webp);
+  mask-border-slice: 228 142 185 142 fill;
+  mask-border-width: 20px 20px 20px 20px;
+  mask-border-outset: 0.5em;
+  mask-border-repeat: round round;
 }
 
 .ben-flex {
@@ -34,6 +55,7 @@
   --illusColor: #b1fc4f;
   --musicColor: rgba(169, 137, 255, 1);
   --vidColor: rgba(154, 236, 255, 1);
+  --blogColor:rgb(219, 221, 222);
 
   --gap: 1em;
 
